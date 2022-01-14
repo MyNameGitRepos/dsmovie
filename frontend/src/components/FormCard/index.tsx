@@ -8,8 +8,8 @@ import './styles.css';
 type Props = {
     movieId : string;
 }
-function FormCard( { movieId } : Props){
 
+function FormCard( { movieId } : Props){
     const [movie, setMovie] = useState<Movie>();
     useEffect(() => {
         axios.get(`${BASE_URL}/movies/${movieId}`)
